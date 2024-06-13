@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.wipro.jcb.livelink.app.user.entity.Contact" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/entity/Contact.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="150" width="197" x="722" y="264"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.wipro.jcb.livelink.app.JcbUserApplication" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/JcbUserApplication.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="350" y="106"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.wipro.jcb.livelink.app.user.config.RedisConfig" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/config/RedisConfig.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="232" x="240" y="180"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.wipro.jcb.livelink.app.user.model.UserResponse" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/model/UserResponse.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="167" width="166" x="517" y="44"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.wipro.jcb.livelink.app.user.entity.User" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/entity/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="154" width="165" x="737" y="50"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.wipro.jcb.livelink.app.user.config.UserConfig" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/config/UserConfig.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="332" y="392"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.wipro.jcb.livelink.app.user.model.ContactRequest" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/model/ContactRequest.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="173" width="325" x="975" y="367"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.wipro.jcb.livelink.app.user.model.UserRequest" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/model/UserRequest.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="239" width="292" x="977" y="33"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="com.wipro.jcb.livelink.app.user.repo.ContactRepository" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/repo/ContactRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="115" y="81"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="com.wipro.jcb.livelink.app.user.repo.UserRepository" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/repo/UserRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="15" y="163"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="com.wipro.jcb.livelink.app.user.controller.UserController" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/controller/UserController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="150" width="179" x="515" y="270"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.wipro.jcb.livelink.app.user.model.ContactResponse" project="JCB-User" 
+    file="/JCB-User/src/main/java/com/wipro/jcb/livelink/app/user/model/ContactResponse.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="102" y="395"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="13">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="14" name="user"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="16">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="17" name="contact"/>      
+      <multiplicity id="18" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="20" name="contactRequest"/>      
+      <multiplicity id="21" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
