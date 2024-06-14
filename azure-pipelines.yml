@@ -4,7 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- Team-NextGen
+ branches:
+  include:
+    - main
+    - Team-NextGen
 
 pool:
   vmImage: ubuntu-latest
