@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <package id="1" language="java" name="com.wipro.jcb.livelink.app" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="170" x="139" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="2" language="java" name="com.wipro.jcb.livelink.app.service.kafka.producer" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/service/kafka/producer" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="305" x="349" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="3" language="java" name="com.wipro.jcb.livelink.app.config.kafka.consumer" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/config/kafka/consumer" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="304" x="694" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="4" language="java" name="com.wipro.jcb.livelink.app.config.kafka.producer" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/config/kafka/producer" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="298" x="1038" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="5" language="java" name="com.wipro.jcb.livelink.app.controller" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="228" x="1376" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="6" language="java" name="com.wipro.jcb.livelink.app.service.sms" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/service/sms" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="243" x="1644" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="7" language="java" name="com.wipro.jcb.livelink.app.service.email" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/service/email" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="249" x="1927" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="8" language="java" name="com.wipro.jcb.livelink.app.model" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="208" x="2216" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="9" language="java" name="com.wipro.jcb.livelink.app.service.kafka.consumer" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/service/kafka/consumer" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="311" x="2464" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="10" language="java" name="com.wipro.jcb.livelink.app.config" project="JCB-kafka-email-sms" 
+    file="/JCB-kafka-email-sms/src/main/java/com/wipro/jcb/livelink/app/config" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="208" x="2815" y="163"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
