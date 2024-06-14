@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'JCB-New-Common-API/JCB-API-Gateway/pom.xml'
+    mavenPomFile: '$(System.DefaultWorkingDirectory)/JCB-API-Gateway/pom.xml'
     goals: 'test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
