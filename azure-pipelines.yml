@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'JCB-user/pom.xml'
+    mavenPomFile: '$(System.DefaultWorkingDirectory)/pom.xml'
     goals: 'package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
