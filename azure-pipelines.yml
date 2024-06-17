@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 parameters:
- - name: JCB-API-Gateway
+ - name: moduleName
    displayName: 'Module Name'
    type: string
    default: 'JCB-API-Gateway'
@@ -21,8 +21,11 @@ stages:
     - job: Build
       steps:
         - script: |
-            echo "##vso[task.setvariable variable=mavenPomPath]$(Build.SourceDirectory)/$(JCB-API-Gateway)/pom.xml"
-          displayName: 'Set Maven POM Path'  
+            echo "##vso[task.setvariable variable=MODULE_NAME]JCB-API-Gateway"
+          displayName: 'Set Maven POM Path'
+        - script: |
+            echo "##vso[task.setvariable variable=mavenPomPath]$(Build.SourceDirectory)/$(moduleName)/pom.xml"
+          displayName: 'Set Maven POM Path'
 
         - task: Maven@3
           inputs:
