@@ -16,7 +16,7 @@ steps:
 - task: Maven@3
   inputs:
   #  mavenPomFile: '$(System_DefaultWorkingDirectory)/pom.xml'
-    mavenPomFile: '$ {{pomFiles}}'
+    mavenPomFile: ${{pomFiles}}
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
