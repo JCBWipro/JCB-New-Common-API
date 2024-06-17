@@ -2,7 +2,11 @@
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
+parameters:
+ -name: moduleName
+  displayName: 'Module Name'
+  type: string
+  default: 'JCB-API-Gateway'
 trigger:
 - Team-NextGen
 
@@ -10,9 +14,11 @@ pool:
   vmImage: windows-latest
 
 steps:
+ -script: |
+   echo "##vso[task.setvariable variable=mavenPomPath]$(Build.SourceDirectory)/$(moduleName)/pom.xml"
 - task: Maven@3
   inputs:
-    mavenPomFile: '$(System.DefaultWorkingDirectory)/pom.xml'
+    mavenPomFile: '$(mavenPomPath)'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
