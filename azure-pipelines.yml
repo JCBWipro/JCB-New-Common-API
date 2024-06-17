@@ -16,7 +16,7 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: '$ {{pomFiles}}'
+    mavenPomFile: '${{pomFiles}}'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
