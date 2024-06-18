@@ -11,7 +11,9 @@ pool:
   vmImage: windows-latest
 
 stages:
+
  - stage: Build
+
    jobs:
     - job: Build
       steps:
@@ -25,3 +27,11 @@ stages:
             publishJUnitResults: true
             testResultsFiles: '**/surefire-reports/TEST-*.xml'
             goals: 'package'
+
+        - task: MysqlDeploymentOnMachineGroup@1
+          inputs:
+            TaskNameSelector: 'SqlTaskFile'
+            ServerName: 'localhost'
+            DatabaseName: 'MySql'
+            SqlUsername: 'root'
+            SqlPassword: 'root'    
