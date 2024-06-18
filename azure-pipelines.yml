@@ -3,11 +3,11 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-parameters:
- - name: moduleName
-   displayName: 'Module Name'
-   type: string
-   default: 'JCB-API-Gateway'
+#parameters:
+# - name: moduleName
+#   displayName: 'Module Name'
+#   type: string
+#   default: 'JCB-API-Gateway'
 
 trigger:
 - Team-NextGen
