@@ -9,9 +9,13 @@ trigger:
 
 pool:
   vmImage: windows-latest
+  
+variables:
+ springDatasourceUrl: 'jdbc:mysql://localhost:3306/mycoservices_db'
+ springDatasourceUserName: 'root'
+ springDatasourcePassword: 'root'  
 
 stages:
-
  - stage: Build
 
    jobs:
