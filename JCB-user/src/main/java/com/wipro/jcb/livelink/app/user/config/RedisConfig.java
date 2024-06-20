@@ -24,13 +24,22 @@ public class RedisConfig {
 	
 	public RedisCacheManagerBuilderCustomizer redisCacheManagerBuilderCustomizer() {
 		return builder -> builder
-				.withCacheConfiguration("Student",
+				.withCacheConfiguration("User",
 						RedisCacheConfiguration.defaultCacheConfig()
-						.entryTtl(Duration.ofMinutes(10)))
+						.entryTtl(Duration.ofMinutes(1)))
 				.withCacheConfiguration("Teacher",
 						RedisCacheConfiguration.defaultCacheConfig()
 						.entryTtl(Duration.ofMinutes(5)));
 	}
+	
+	@Bean
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setConnectionFactory(redisConnectionFactory);
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setValueSerializer(new StringRedisSerializer());
+        return template;
+    }
 	
 //	@Bean
 //    JedisConnectionFactory jedisConnectionFactory() {
@@ -39,14 +48,5 @@ public class RedisConfig {
 //        jedisConFactory.setPort(6379);
 //        return jedisConFactory;
 //    }
-
-    @Bean
-    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-        RedisTemplate<String, Object> template = new RedisTemplate<>();
-        template.setConnectionFactory(redisConnectionFactory);
-        template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new StringRedisSerializer());
-        return template;
-    }
 
 }

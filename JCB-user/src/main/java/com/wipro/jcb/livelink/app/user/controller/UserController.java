@@ -2,11 +2,11 @@ package com.wipro.jcb.livelink.app.user.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.core.env.Environment;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import com.wipro.jcb.livelink.app.user.model.ContactResponse;
+import com.wipro.jcb.livelink.app.user.model.UserContactResponse;
 import com.wipro.jcb.livelink.app.user.model.UserRequest;
 import com.wipro.jcb.livelink.app.user.model.UserResponse;
 import com.wipro.jcb.livelink.app.user.service.UserService;
@@ -23,45 +25,56 @@ import com.wipro.jcb.livelink.app.user.service.UserService;
 @RequestMapping("/api/user")
 public class UserController {
 	
-	@Autowired
-	private Environment environment;
-	
-	@Autowired
-	private WebClient.Builder webClientBuilder;
-	
 	@Value("${contactUri}")
 	public String contactUri;
-	
+
+	@Autowired
+	private WebClient.Builder webClientBuilder;
+
 	@Autowired
 	private UserService userService;
-	
-	//Just For Testing
-	@GetMapping 
+
+	@GetMapping
 	public String getString() {
-		return "User Authenticated Successfuly : " + environment.getProperty("local.server.port");
+		return "User Service";
 	}
-	
+
 	@GetMapping("/getresponseFromContactService")
 	public String getresponseFromContactService() {
 		String response = webClientBuilder.build().get().uri(contactUri).retrieve().bodyToMono(String.class).block();
 		return response;
 	}
-	
+
 	@PostMapping("/saveUserWithContact")
 	public void saveUserWithContact(@RequestBody UserRequest userRequest) {
 		userService.saveUser(userRequest);
 	}
-	
-	@Cacheable(value="usersById")
+
+	@Cacheable(key = "#id", value = "usersById")
 	@GetMapping("/getUserById/{id}")
 	public UserResponse getUserById(@PathVariable int id) throws InterruptedException {
-		return userService.findUserDetailsById(id);
+		System.out.println("From Controller: getUserById() Executed");
+		return userService.findUserById(id);
+	}
+
+	@Cacheable(value = "users")
+	@GetMapping("/getAllUsers")
+	public List<UserResponse> getAllUsers() throws InterruptedException {
+		return userService.findAllUsers();
+	}
+
+	@GetMapping("/getUserDetailsById/{id}")
+	public UserContactResponse getUserDetailsById(@PathVariable int id) {
+		return userService.getUserDetailsById(id);
 	}
 	
-	@Cacheable(value="users")
-	@GetMapping("/getAllUserDetails")
-	public List<UserResponse> getAllUserDetails() throws InterruptedException {
-		return userService.findAllUserDetails();
+	@GetMapping("/getContactDetailsByUserID/{id}")
+	public List<ContactResponse> getContactDetailsByUserID(@PathVariable int id) {
+		ParameterizedTypeReference<List<ContactResponse>> responseType = new ParameterizedTypeReference<List<ContactResponse>>(){};
+		System.out.println("In UserService: Call Made to Contact Service to fetch ContactDetailsByUserID "+id);
+		ResponseEntity<List<ContactResponse>> responseEntity = webClientBuilder.build().get().uri(contactUri+"/getContactDetailsByUserID/"+id).retrieve().toEntity(responseType).block();
+		List<ContactResponse> contactResponse = responseEntity.getBody();
+		return contactResponse;
 	}
-	
+
 }

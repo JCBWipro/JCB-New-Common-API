@@ -14,8 +14,13 @@ import com.wipro.jcb.livelink.app.user.entity.User;
 public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	@Query(nativeQuery = true, value = "select id, age, first_name, last_name from microservices_db.user where id=:id")
-	Optional<User> findUserDetailsById(@Param("id") int id);
-	
+	Optional<User> findUserById(@Param("id") int id);
+
 	@Query(nativeQuery = true, value = "select id, age, first_name, last_name from microservices_db.user")
-	List<User> findAllUserDetails();
+	List<User> findAllUsers();
+
+	@Query(nativeQuery = true, value = "SELECT microservices_db.user.*, microservices_db.contact_details.* FROM microservices_db.contact_details\n"
+			+ "INNER JOIN microservices_db.user ON microservices_db.contact_details.user_id=microservices_db.user.id\n"
+			+ "where microservices_db.user.id=:id")
+	List<Object[]> findUserDetailsByUserId(@Param("id") int id);
 }
